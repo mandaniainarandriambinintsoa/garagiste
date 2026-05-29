@@ -83,3 +83,24 @@ Workflow cree et publie le 2026-05-29 dans l'instance n8n `https://n8n.manda-ia.
 - serveur local redemarre sur `http://127.0.0.1:3000` avec `.env.local` charge.
 
 Le workflow valide le secret, normalise la demande, cree un evenement Google Calendar, envoie un email interne au garage et renvoie une reponse JSON. Le garage confirme manuellement le creneau avant intervention.
+
+## GitHub / Vercel
+
+Repo GitHub cree le 2026-05-29 :
+
+- nom : `garagiste` ;
+- URL : `https://github.com/mandaniainarandriambinintsoa/garagiste` ;
+- branche : `master`.
+
+Projet Vercel cree et connecte au repo :
+
+- projet : `garagiste` ;
+- URL production alias : `https://garagiste-zeta.vercel.app` ;
+- inspect deploy : `https://vercel.com/mandas-projects-d5939030/garagiste/F3nZ51UrxfD9cznH1cvj9UVtvKsT` ;
+- variables Vercel production ajoutees : `N8N_APPOINTMENT_WEBHOOK_URL`, `GARAGE_WEBHOOK_SECRET`.
+
+Verification production :
+
+- `GET https://garagiste-zeta.vercel.app` OK 200 ;
+- `POST https://garagiste-zeta.vercel.app/api/appointment` OK 200 avec relais n8n ;
+- une demande `TEST Vercel Prod` a ete envoyee, a ignorer cote email/calendar.
