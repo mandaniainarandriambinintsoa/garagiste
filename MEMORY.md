@@ -104,3 +104,17 @@ Verification production :
 - `GET https://garagiste-zeta.vercel.app` OK 200 ;
 - `POST https://garagiste-zeta.vercel.app/api/appointment` OK 200 avec relais n8n ;
 - une demande `TEST Vercel Prod` a ete envoyee, a ignorer cote email/calendar.
+
+## Direction maintenance / offre apres livraison
+
+Decision produit prise le 2026-05-29 pour les sites web metier :
+
+- ne pas creer de dashboard client par defaut pour les sites vitrines simples ;
+- garder le contenu dans une structure centralisee et maintenable (`data/`, `lib/site.ts`, images production dans `public/images/...`) ;
+- faire les petites modifications texte/image via maintenance mensuelle, puis push/deploiement Vercel ;
+- proposer un palier `Avance + suivi` dans le portfolio : `1 500 EUR + 149 EUR/mois` ;
+- le suivi mensuel couvre petites modifications raisonnables, uptime, PageSpeed, indexation, sitemap/robots/canonical et rapport SEO/GEO ;
+- ne creer un CMS/admin/Supabase que si le client a un contenu qui change souvent ou un vrai besoin operationnel ;
+- pour les sites metier locaux comme Garage Antananarivo, le dashboard n'est pas prioritaire : la valeur vendue est le site performant + formulaire n8n + maintenance + surveillance SEO/GEO.
+
+Regle a garder pour les prochains clones : dashboard seulement quand il reduit vraiment la charge ou donne de l'autonomie utile au client. Sinon, contenu centralise + abonnement de suivi.
