@@ -118,3 +118,16 @@ Decision produit prise le 2026-05-29 pour les sites web metier :
 - pour les sites metier locaux comme Garage Antananarivo, le dashboard n'est pas prioritaire : la valeur vendue est le site performant + formulaire n8n + maintenance + surveillance SEO/GEO.
 
 Regle a garder pour les prochains clones : dashboard seulement quand il reduit vraiment la charge ou donne de l'autonomie utile au client. Sinon, contenu centralise + abonnement de suivi.
+
+## Regle Sheet vs Supabase vs CRUD
+
+Decision produit ajoutee le 2026-05-29 :
+
+- un Google Sheet peut depanner pour une liste simple ou un prototype, mais ce n'est pas la solution principale a vendre pour un site metier premium ;
+- le client ne doit pas avoir a toucher directement Supabase ;
+- quand le contenu change souvent, la bonne solution est Supabase derriere + mini interface CRUD simple devant ;
+- CRUD utile pour voyage, restaurant, immobilier, evenementiel, catalogue, offres regulieres, disponibilites, prix, photos ou contenu multilingue ;
+- CRUD non prioritaire pour garage, artisan, avocat, dentiste, salon, consultant ou site vitrine dont le contenu bouge peu ;
+- le tarif a retenir : maintenance simple a partir de `149 EUR/mois`; mini admin CRUD en setup supplementaire `500-1 000 EUR`; suivi avec CRUD + SEO/GEO plutot `249-399 EUR/mois`.
+
+Positionnement commercial : `site metier classique = contenu centralise + maintenance`; `site metier dynamique = Supabase + mini CRUD + abonnement plus eleve`.
